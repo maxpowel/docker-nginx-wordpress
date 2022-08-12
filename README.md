@@ -21,7 +21,7 @@ docker network inspect local
 You can put directly your `wp-config.php` configured or using environment variables, it's up to you!
 
 # Custom php.ini
-By default, no php.ini the default values are used. You can provide your own php.ini by providing it to docker like this:
+By default, no php.ini the default values are used. It is usually common the needed to increment the `upload_max_filesize` and stuff like this. You can provide your own php.ini easily
 ```
 docker run -it --rm -p 80:80 --network local -v /home/maxpowel/my_wordpress:/var/www/html/wordpress -v /home/maxpowel/my_wordpress_config/php.ini:/usr/local/etc/php/php.ini --name wordpress maxpowel/nginx-wordpress
 ```
